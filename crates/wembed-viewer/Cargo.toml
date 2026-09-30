@@ -1,0 +1,36 @@
+[package]
+name = "wembed-viewer"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+
+[dependencies]
+wembed-sys = { path = "../wembed-sys" }
+anyhow = "1.0.103"
+bytemuck = "1.25.0"
+clap = { version = "4.5.61", features = ["derive"] }
+egui = "0.32.1"
+egui-wgpu = { version = "0.32.1", features = ["winit"] }
+egui-winit = "0.32.1"
+# 0.33 is the egui_plot release tracking egui 0.32 — bump the pair together.
+egui_plot = "0.33"
+glam = { version = "0.33.2", features = ["bytemuck"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+pollster = "0.4.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml_ng = "0.10"
+# same rev wembed v0.3.0 builds sprk-ffi from (src/sprk/CMakeLists.txt)
+sprk = { git = "https://github.com/wembed-pdf/sprk.git", rev = "1e195eab1119aa5cf420bfb322788d53b95bf1ad" }
+toml = "1.0"
+wgpu = "25.0.2"
+winit = "0.30.13"
+ab_glyph = "0.2.32"
+
+[dev-dependencies]
+tempfile = "3"
+
+

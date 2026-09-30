@@ -1,0 +1,33 @@
+graph = "graph.edg"
+
+[embedder]
+seed = 42
+layered = true
+
+[attrs]
+labels = "labels.jsonl"
+categories = "continents.txt"
+
+[theme]
+name = "tomorrow"
+
+[visual]
+vertex_color_source = "categories"
+vertex_size_source = "weight"
+vertex_size_scale = 0.5
+edge_alpha_source = "weight"
+
+# category ids index the theme's accents (base08, base09, ...); the ids in
+# continents.txt are spread so neighbouring continents get distinct hues
+[legend]
+entries = [
+    { label = "Africa", category = 0 },
+    { label = "Asia", category = 1 },
+    { label = "Europe", category = 5 },
+    { label = "North America", category = 3 },
+    { label = "Oceania", category = 4 },
+    { label = "South America", category = 6 },
+]
+
+[text]
+title = "OpenFlights route network (2014)"

@@ -1,0 +1,22 @@
+# colors.hex encodes each vertex's hidden generator position (`generator -w`) in
+# OKLCH: hue from the angle around the square's centre, chroma from the distance to it
+graph = "graph.edg"
+
+[embedder]
+seed = 42
+layered = true
+
+[attrs]
+colors = "colors.hex"
+
+[theme]
+name = "tomorrow"
+
+[visual]
+vertex_color_source = "file"
+vertex_size_source = "weight"
+vertex_size_scale = 0.5
+edge_alpha_source = "weight"
+
+[text]
+title = "GIRG · 10k vertices"

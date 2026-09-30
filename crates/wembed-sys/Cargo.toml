@@ -1,0 +1,20 @@
+[package]
+name = "wembed-sys"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Rust bindings to the wembed C++ graph embedder via cxx"
+links = "wembed"
+
+[dependencies]
+cxx = "1.0"
+
+[build-dependencies]
+cxx-build = "1.0"
+cmake = "0.1"
+
+[[example]]
+name = "smoke"
+path = "examples/smoke.rs"
